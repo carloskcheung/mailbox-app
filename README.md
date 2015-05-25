@@ -2,51 +2,33 @@
 
 MailBox App using Swift
 
-<img src="" />
+<img src="http://i.imgur.com/LXSIAzH.gif" />
 
-
-Spent about ~X hours working on this! 
 
 ---
 
 # Requirements
 
-## Static photo tiles on the initial screen
-Completed: Photo tiles move with scrolling
+## On Dragging Message Left
+1. Initially, the revealed background color should be gray.
+2. As the reschedule icon is revealed, it should start semi-transparent and become fully opaque. If released at this point, the message should return to its initial position.
+4. After 60 pts, the later icon should start moving with the translation and the background should change to yellow. Upon release, the message should continue to reveal the yellow background. When the animation it complete, it should show the reschedule options.
+5. After 260 pts, the icon should change to the list icon and the background color should change to brown. Upon release, the message should continue to reveal the brown background. When the animation it complete, it should show the list options.
 
-## Sign In
-1. Completed: Tapping on email/password reveals the keyboard and shifts the scrollview and Sign In button up.
-2. Competed: User sees an error alert when no email is present or no password is present.
-3. Completed: User sees a loading screen upon tapping the Sign In button.
-4. Unknown: alertView.dismissWithClickedButtonIndex(0, animated: true) dismisses the loading screen with no buttons.
-5. Completed: User sees an error alert when entering the wrong email/password combination.
-6. Completed: User is taken to the tutorial screens upon entering the correct email/password combination.
-* in-complete (Optional): When the keyboard is visible, if the user pulls down on the scrollview, it will dismiss the keyboard. 
-* in-complete (Optional): On appear, scale the form up and fade it in.
+## Dismissing
+1. User can tap to dismissing the reschedule or list options. After the reschedule or list options are dismissed, you should see the message finish the hide animation.
 
-## Optional: Sign Up
-1. Complete: Tapping in the form reveals the keyboard and shifts the scrollview and "Create a Dropbox" button up.
-2. Complete: Tapping the Agree to Terms checkbox selects the checkbox.
-3. Complete: Tapping on Terms shows a webview with the terms.
-4. Complete: User is taken to the tutorial screens upon tapping the "Create a Dropbox" button.
+## On dragging the message right...
+1. Initially, the revealed background color should be gray.
+2. As the archive icon is revealed, it should start semi-transparent and become fully opaque. If released at this point, the message should return to its initial position.
+3. After 60 pts, the archive icon should start moving with the translation and the background should change to green. Upon release, the message should continue to reveal the green background. When the animation it complete, it should hide the message.
+5. After 260 pts, the icon should change to the delete icon and the background color should change to red. Upon release, the message should continue to reveal the red background. When the animation it complete, it should hide the message.
 
-## Tutorial Screens
-1. Complete: User can page between the screens
-2. Complete: User can page between the screens with updated dots
-* in-complete (Optional): Upon reaching the 4th page, hide the dots and show the "Take Carousel for a Spin" button -- Had some small issues with hiding the page-control on the 4th page.
+## Optional: Panning from the edge should reveal the menu
+1. Optional: If the menu is being revealed when the user lifts their finger, it should continue revealing.
+2. Optional: If the menu is being hidden when the user lifts their finger, it should continue hiding.
 
-## Image Timeline
-1. Complete: Display a scrollable view of images.
-2. Complete: User can tap on the conversations button to see the conversations screen (push).
-3. Complete: User can tap on the profile image to see the settings view (modal from below).
-
-## Settings
-1. Complete: User can dismiss the settings screen.
-2. Complete: User can log out
-
-## Learn more about Carousel
-1. Complete: Show the "Learn more about Carousel" button in the photo timeline.
-2. Complete: Tap the X to dismiss the banner
-* in-complete (Optional): Track the 3 events: View a photo full screen, Swipe left and right, & Share a photo 
-* in-complete (Optional): Upon completion of the events, mark them green. 
-* in-complete (Optional): When all events are completed, dismiss the banner.
+## Other Optionals
+* Optional: Tapping on compose should animate to reveal the compose view.
+* Optional: Tapping the segmented control in the title should swipe views in from the left or right.
+* Optional: Shake to undo.

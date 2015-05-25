@@ -155,7 +155,7 @@ class MailboxViewController: UIViewController, UIGestureRecognizerDelegate {
             contentOriginalCenter = contentView.center
         }
         else if sender.state == UIGestureRecognizerState.Changed{
-            contentView.center = CGPoint(x:contentOriginalCenter.x - translation.x, y: contentOriginalCenter.y)
+//            contentView.center = CGPoint(x:contentOriginalCenter.x - translation.x, y: contentOriginalCenter.y)
             
             
         }
